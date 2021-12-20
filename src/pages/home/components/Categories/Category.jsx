@@ -1,6 +1,6 @@
 import './Category.css';
 
-import arrow from '../../../icons/arrow_button.svg';
+import arrow from '../../../../icons/arrow_button.svg';
 
 import { useRef } from 'react/cjs/react.development';
 
@@ -27,7 +27,7 @@ function subcatVisibility(ref, imgRef) {
 
 export default function Category({Name, Subcategories}) {
     
-    const subcategoriesRef = useRef(null); // ref on <ul> with subcat
+    const subcategoriesRef = useRef(null); // ref to <ul> with subcat
     const imgRef = useRef(null); // ref to <img>
 
     return(

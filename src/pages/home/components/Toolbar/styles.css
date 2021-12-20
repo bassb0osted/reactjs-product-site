@@ -1,0 +1,153 @@
+/*Styles of SEARCH*/
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background: rgba(155, 199, 193, 0.12);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    border-radius: 8px;
+    padding: 14px;
+
+    width: 25vw;
+    min-width: 150px;
+    
+    padding: 10px;
+    
+}
+
+/*Styles of input inside the search-container*/
+.search-container > input {
+    background-color: transparent;
+    border: 0;
+
+    appearance: none;
+    outline: none;
+
+    margin-left: 10px;
+    width: 100%;
+}
+
+/*Styles of CART BUTTON and hover*/
+
+.cart-button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: rgba(155, 199, 193, 0.12);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    border-radius: 30px;
+    padding: 14px;
+    width: 150px;
+
+    font-weight: 700;
+    color: #558881;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cart-button-container > span {
+    border-left: 4px solid rgba(85, 136, 129, 0.25);
+    height: 100%;
+
+    transition: 0.3s;
+}
+
+.cart-button-container > div > svg > path {
+    transition: 0.3s;
+}
+
+.cart-button-container:hover {
+    background-color: #558881;
+    color: white;
+}
+
+.cart-button-container:hover span {
+    border-left: 4px solid rgb(255, 255, 255);
+}
+
+.cart-button-container:hover path {
+    stroke: white;
+}
+
+/*Styles of SORTING*/
+
+.sorting-container {
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 18px;
+
+    margin: 10px 0px;
+}
+
+/*styles of text (choosed sorting type)*/
+.sorting-container span {
+    font-weight: 400;
+    color: #558881;
+    text-decoration: underline dotted;
+
+    transition: 0.3s;
+
+    position: relative;
+}
+
+.sorting-menu {
+    position: absolute;
+    right: 0px;
+
+    background-color: white;
+
+    font-weight: 500;
+    color: black;
+
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+
+    padding: 15px 0px;
+
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+    transition: 0.3s;
+}
+
+.sorting-container span:hover .sorting-menu{
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.sorting-menu > li {
+    padding: 10px 20px;
+}
+
+.sorting-menu > li:hover {
+    background: rgba(155, 199, 193, 0.12);
+    color: #558881;
+}
+
+.sorting-menu-item-selected {
+    background: rgba(155, 199, 193, 0.12);
+    color: #558881;
+}
+
+@media all and (max-width: 538px) {
+    .cart-button-container {
+        margin: 15px 0px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+}

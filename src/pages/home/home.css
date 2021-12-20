@@ -1,4 +1,31 @@
 .wrapper {
     max-width: 1800px;
-    padding: 0 15px;
+    padding: 0 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+
+    margin: 15px 0px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 25px;
+
+    width: 100%;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    user-select: none;
+
+    width: 100%;
 }

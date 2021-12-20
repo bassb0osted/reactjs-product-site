@@ -2,7 +2,7 @@ import './Category.css';
 
 import Category from './Category';
 
-import { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 
 export default function Categories() {
 
@@ -22,7 +22,7 @@ export default function Categories() {
         <div className = 'categories'>
             
             {
-                categories.map((el, ind) => <div key={el.Name+ind}>{Category(el)}</div>)
+                categories.map((el, ind) => <Fragment key={el.Name+ind}>{Category(el)}</Fragment>)
             }
 
         </div>
