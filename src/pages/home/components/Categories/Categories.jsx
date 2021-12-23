@@ -9,12 +9,30 @@ export default function Categories() {
     const [categories, setCategories] = useState([
         {
             Name: 'В тісті',
-            Subcategories: ['З м\'ясом', 'Без м\'яса']
+            Subcategories: [
+                {
+                    Id: 0,
+                    Name: 'З м\'ясом', 
+                },
+                {
+                    Id: 1,
+                    Name: 'Без м\'яса'
+                }
+            ]
         },
 
         {
             Name: 'Без тіста',
-            Subcategories: ['З м\'ясом', 'Без м\'яса']
+            Subcategories: [
+                {
+                    Id: 2,
+                    Name: 'З м\'ясом', 
+                },
+                {
+                    Id: 3,
+                    Name: 'Без м\'яса'
+                }
+            ]
         }
     ])
 

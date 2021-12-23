@@ -41,9 +41,9 @@ export default function Category({Name, Subcategories}) {
                 <ul className = 'category-elements' ref={subcategoriesRef}>
                     {
                         Subcategories.map(el =>             
-                            <li key={el}>
-                                <input type="checkbox"/>
-                                <p>{el}</p>
+                            <li key={el.Id}>
+                                <input type="checkbox" id={el.Id}/>
+                                <label for={el.Id}><p>{el.Name}</p></label>
                             </li>
                         )
                     }

@@ -64,6 +64,9 @@
     margin: 6.5px 0px;
 }
 
+.category-elements p {
+    cursor: pointer;
+}
 /*Styles of checkbox*/
 input[type="checkbox"] {
 
