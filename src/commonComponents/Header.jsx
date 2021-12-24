@@ -1,5 +1,7 @@
 import './styles.css'
 
+import { Link } from 'react-router-dom';
+
 export default function Header() {
     return(
         <header className = 'header'>
@@ -15,10 +17,21 @@ export default function Header() {
 
                     <nav className = 'header-menu'>
                         <ul>
-                            <li><a href = '#'>Головна</a></li>
-                            <li><a href = '#'>Кошик</a></li>
-                            <li><a href = '#'>Доставка та оплата</a></li>
-                            <li><a href = '#'>Контакти</a></li>
+                            <li>
+                                <Link to='/'>Головна</Link>
+                            </li>
+
+                            <li>
+                                <Link to='/cart'>Кошик</Link>
+                            </li>
+
+                            <li>
+                                <Link to='/'>Доставка та оплата</Link>
+                            </li>
+                            
+                            <li>
+                                <Link to='/'>Контакти</Link>
+                            </li>
                         </ul>
                     </nav>
 
