@@ -1,6 +1,8 @@
 /*Styles of items*/
 .items-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
     margin: 15px 0px;
     
@@ -14,6 +16,7 @@
     align-items: center;
 
     padding: 10px 25px;
+    margin: 5px 0px;
 
     border: 1px solid #DFDFDF;
     box-sizing: border-box;

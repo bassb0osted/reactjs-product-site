@@ -142,7 +142,7 @@
     color: #558881;
 }
 
-@media all and (max-width: 538px) {
+@media all and (max-width: 556px) {
     .cart-button-container {
         margin: 15px 0px;
     }

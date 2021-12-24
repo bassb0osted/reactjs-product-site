@@ -93,10 +93,6 @@
     }
 }
 
-@media all and (max-width: 800px) {
-
-}
-
 @media all and (max-width: 320px) {
     .header-menu > ul {
         flex-direction: column;
