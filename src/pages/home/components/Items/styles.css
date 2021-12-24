@@ -1,0 +1,97 @@
+/*Styles of items*/
+.items-container {
+    display: flex;
+
+    margin: 15px 0px;
+    
+}
+
+
+/*Styles of one item*/
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px 25px;
+
+    border: 1px solid #DFDFDF;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    user-select: none;
+}
+
+.item-container h2 {
+    font-size: 22px;
+    margin: 2px;
+}
+
+.item-container h4 {
+    font-weight: 500;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+    max-width: 225px;
+    max-height: 110px;
+
+    border: 2px dashed #000000;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.item-info > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    height: 100%;
+    width: 100%;
+}
+
+.item-info p {
+    flex: 1 0 40%;
+    margin: 2px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.item-info > div::-webkit-scrollbar {
+    width: 1px;
+}
+
+/*Bottom of item (price and button)*/
+.item-bottom-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.item-add-button {
+    background-color: #558881;
+    padding: 6px;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+.item-add-button:hover {
+    background-color: black;
+}
