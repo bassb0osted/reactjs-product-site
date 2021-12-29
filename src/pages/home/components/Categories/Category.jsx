@@ -25,7 +25,7 @@ function subcatVisibility(ref, imgRef) {
     }
 }
 
-export default function Category({Name, Subcategories}) {
+export default function Category({name, subcategories}) {
     
     const subcategoriesRef = useRef(null); // ref to <ul> with subcat
     const imgRef = useRef(null); // ref to <img>
@@ -34,16 +34,16 @@ export default function Category({Name, Subcategories}) {
         <ul className = 'category'>
             <li>
                 <div onClick={() => subcatVisibility(subcategoriesRef, imgRef)}>
-                    <p>{Name}</p>
-                    <img src = {arrow} alt="arrow" height = "8.5px" ref={imgRef}/>
+                    <p>{name}</p>
+                    <img src={arrow} alt="arrow" height="8.5px" ref={imgRef}/>
                 </div>
 
-                <ul className = 'category-elements' ref={subcategoriesRef}>
+                <ul className='category-elements' ref={subcategoriesRef}>
                     {
-                        Subcategories.map(el =>             
-                            <li key={el.Id}>
-                                <input type="checkbox" id={el.Id}/>
-                                <label for={el.Id}><p>{el.Name}</p></label>
+                        subcategories.map(el =>             
+                            <li key={el._id}>
+                                <input type="checkbox" id={el._id}/>
+                                <label for={el._id}><p>{el.value}</p></label>
                             </li>
                         )
                     }

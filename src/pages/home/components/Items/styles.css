@@ -17,6 +17,7 @@
 
     padding: 10px 25px;
     margin: 5px 0px;
+    max-width: 270px;
 
     border: 1px solid #DFDFDF;
     box-sizing: border-box;
@@ -40,7 +41,6 @@
     flex-wrap: nowrap;
     align-items: center;
     
-    max-width: 225px;
     max-height: 110px;
 
     border: 2px dashed #000000;
@@ -97,4 +97,17 @@
 
 .item-add-button:hover {
     background-color: black;
+}
+
+/*Styles of error*/
+
+.warning {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+
+    margin: 30px;
 }

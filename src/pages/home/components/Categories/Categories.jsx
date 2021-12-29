@@ -2,45 +2,32 @@ import './Category.css';
 
 import Category from './Category';
 
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
 export default function Categories() {
 
-    const [categories, setCategories] = useState([
-        {
-            Name: 'В тісті',
-            Subcategories: [
-                {
-                    Id: 0,
-                    Name: 'З м\'ясом', 
-                },
-                {
-                    Id: 1,
-                    Name: 'Без м\'яса'
-                }
-            ]
-        },
+    const [categories, setCategories] = useState([])
 
-        {
-            Name: 'Без тіста',
-            Subcategories: [
-                {
-                    Id: 2,
-                    Name: 'З м\'ясом', 
-                },
-                {
-                    Id: 3,
-                    Name: 'Без м\'яса'
-                }
-            ]
-        }
-    ])
+    useEffect(() => {
+        fetch("http://127.0.0.1:5000/api/categories")
+        .then(res => {
+            if(res.ok)
+                return res.json();
+        })
+        .then(data => {
+            setCategories(data);
+        })
+    }, [])
 
     return(
         <div className = 'categories'>
             
             {
-                categories.map((el, ind) => <Fragment key={el.Name+ind}>{Category(el)}</Fragment>)
+                categories.map(el => 
+                    <Fragment key={el._id}>
+                        <Category name={el.name} subcategories={el.subcategories}/>
+                    </Fragment>
+                )
             }
 
         </div>

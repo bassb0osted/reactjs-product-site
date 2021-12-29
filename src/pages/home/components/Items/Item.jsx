@@ -1,38 +1,26 @@
 import './styles.css'
 
-import testImg from './im.png';
-
 import addIco from '../../../../icons/add_item.svg';
 
-export default function Item() {
+export default function Item({name, composition, price, picture}) {
     return(
         <div className='item-container'>
-            <img src={testImg} alt='img' height='155px'/>
-            <h2>Котлети</h2>
+            <img src={`http://localhost:5000/api/items/img/${picture}.jpg`} alt={name} height='155px' width='230px'/>
+            <h2>{name}</h2>
             
             <div className='item-info'>
                 <h4>Склад</h4>
 
                 <div>
-                    <p>Фарш свинний</p>
-                    <p>Цибуля</p>
-                    <p>Морква</p>
-                    <p>Соль</p>
-                    <p>Перець</p>
-                    <p>Фарш телячий</p>
-                    <p>Хліб білий</p>
-                    <p>Масло</p>
-                    <p>Мука</p>
-                    <p>Фарш телячий</p>
-                    <p>Хліб білий</p>
-                    <p>Масло</p>
-                    <p>Мука</p>
+                    {
+                        composition.map((el, ind) => <p key={el + ind}>{el}</p>)
+                    }
                 </div>
             </div>
 
             <div className='item-bottom-panel'>
 
-                <h2>195$</h2>
+                <h2>{price}&#8372;/кг</h2>
 
                 <div className='item-add-button'>
                     <img src={addIco} alt='Add item'/>
