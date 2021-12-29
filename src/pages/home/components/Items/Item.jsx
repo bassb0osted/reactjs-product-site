@@ -5,7 +5,7 @@ import addIco from '../../../../icons/add_item.svg';
 export default function Item({name, composition, price, picture}) {
     return(
         <div className='item-container'>
-            <img src={`http://localhost:5000/api/items/img/${picture}.jpg`} alt={name} height='155px' width='230px'/>
+            <img src={`http://localhost:5000/api/items/img/${picture}.jpg`} alt={name}/>
             <h2>{name}</h2>
             
             <div className='item-info'>

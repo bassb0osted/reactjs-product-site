@@ -27,12 +27,24 @@
 }
 
 .item-container h2 {
-    font-size: 22px;
+    font-size: 20px;
     margin: 2px;
+}
+
+.item-container > h2 {
+    display: flex;
+    align-items: center;
+    height: 22%;
 }
 
 .item-container h4 {
     font-weight: 500;
+}
+
+.item-container > img {
+    height: 155px;
+
+    overflow: hidden;
 }
 
 .item-info {
