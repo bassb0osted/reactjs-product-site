@@ -7,38 +7,43 @@ import CartButton from './components/Toolbar/CartButton';
 import Sorting from './components/Toolbar/Sorting';
 import Items from './components/Items/Items';
 
+import StoreProvider from './components/context';
+
 export default function Home() {
+
     return(
         <div>
 
             <Header />
 
-            <div className = 'wrapper'>
-                
-                <div className='container'>
+            <StoreProvider>
 
-                    <div>
-                        <Categories />
-                    </div>
+                <div className = 'wrapper'>
+                    
+                    <div className='container'>
 
-
-                    <div className='content'>
-
-                        <div className='toolbar'> 
-
-                            <Search />
-                            <CartButton />
-                            <Sorting />
-
+                        <div>
+                            <Categories />
                         </div>
 
-                        <Items />
+
+                        <div className='content'>
+
+                            <div className='toolbar'> 
+                                <Search />
+                                <CartButton />
+                                <Sorting />
+                            </div>
+
+                            <Items />
+
+                        </div>
 
                     </div>
 
                 </div>
 
-            </div>
+            </StoreProvider>
 
         </div>
     );

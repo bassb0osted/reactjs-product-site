@@ -102,7 +102,7 @@
     padding: 6px;
     border-radius: 50%;
 
-    cursor: pointer;
+    border: none;
 
     transition: 0.5s;
 }

@@ -1,4 +1,4 @@
-import './Category.css';
+import './styles.css';
 
 import Category from './Category';
 

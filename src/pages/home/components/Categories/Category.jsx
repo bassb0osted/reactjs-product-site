@@ -1,8 +1,10 @@
-import './Category.css';
+import './styles.css';
 
 import arrow from '../../../../icons/arrow_button.svg';
 
-import { useRef } from 'react/cjs/react.development';
+import Subcategory from './Subcategory';
+
+import { useRef } from 'react';
 
 // hide or show subcategories onClick and rotate the arrow
 function subcatVisibility(ref, imgRef) {
@@ -40,12 +42,7 @@ export default function Category({name, subcategories}) {
 
                 <ul className='category-elements' ref={subcategoriesRef}>
                     {
-                        subcategories.map(el =>             
-                            <li key={el._id}>
-                                <input type="checkbox" id={el._id}/>
-                                <label for={el._id}><p>{el.value}</p></label>
-                            </li>
-                        )
+                        subcategories.map(subcategory => <Subcategory _id = {subcategory._id} value={subcategory.value}/>)
                     }
                 </ul>
             </li>
