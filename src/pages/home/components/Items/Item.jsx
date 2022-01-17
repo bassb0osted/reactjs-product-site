@@ -6,7 +6,7 @@ import { StoreContext } from '../context';
 
 import { useContext } from 'react';
 
-export default function Item({name, composition, price, picture}) {
+export default function Item({name, composition, price, picture, _id}) {
 
     const {goods} = useContext(StoreContext);
 
@@ -20,9 +20,23 @@ export default function Item({name, composition, price, picture}) {
             goods: [...choosedGoods.goods]
         };
 
-        newChoosedGoods.totalPrice += price;
-        newChoosedGoods.totalAmount += 1;
+        let productInGoods = newChoosedGoods.goods.find(el => el._id === _id);
+        if(typeof productInGoods == 'undefined') {
+            let product = {
+                _id: _id,
+                name: name,
+                price: price,
+                amount: 1
+            };
+            newChoosedGoods.goods.push(product);
 
+            newChoosedGoods.totalAmount += 1;
+        }
+        else {
+            productInGoods.amount += 1;
+            productInGoods.price += price;
+        }
+        newChoosedGoods.totalPrice += price;
         setChoosedGoods(newChoosedGoods);
     }
 

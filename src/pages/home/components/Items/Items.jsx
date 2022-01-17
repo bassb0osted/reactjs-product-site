@@ -75,7 +75,7 @@ export default function Items() {
                 items
                 .filter(el => filter[0].length ? filter[0].includes(el.subcategory.value) : true) // filter of items
                 .sort(sortHandler)
-                .map(el => <Item key={el._id} name={el.name} composition={el.composition} price={el.price} picture={el.picture}/>)
+                .map(el => <Item key={el._id} name={el.name} composition={el.composition} price={el.price} picture={el.picture} _id={el._id}/>)
             }
             
         </div>
