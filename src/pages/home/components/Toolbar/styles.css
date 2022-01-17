@@ -51,6 +51,20 @@
     transition: 0.3s;
 }
 
+.cart-button-container > p {
+    text-align: center;
+    width: 55px;
+}
+
+.cart-button-container > div {
+    display: flex;
+    align-items: center;
+}
+
+.cart-button-container > div > p {
+    width: 7px;
+}
+
 .cart-button-container > span {
     border-left: 4px solid rgba(85, 136, 129, 0.25);
     height: 100%;
